@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAD Lonner | Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SAD Lonner</h1>
+        </div>
+        <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section class="page-header">
+            <h2>Gallery</h2>
+        </section>
+
+        <section class="gallery-filter">
+            <ul class="filter-buttons">
+                <li class="active" data-filter="all">All</li>
+                <li data-filter="performances">Performances</li>
+                <li data-filter="backstage">Backstage</li>
+                <li data-filter="music-videos">Music Videos</li>
+            </ul>
+        </section>
+
+        <section class="gallery-grid">
+            <div class="gallery-item" data-category="performances">
+                <img src="/api/placeholder/400/300" alt="Live Performance">
+                <div class="gallery-caption">
+                    <h3>Global Sound Festival</h3>
+                    <p>London, UK - November 2024</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="backstage">
+                <img src="/api/placeholder/400/300" alt="Backstage Moment">
+                <div class="gallery-caption">
+                    <h3>Behind the Scenes</h3>
+                    <p>European Tour - September 2024</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="music-videos">
+                <img src="/api/placeholder/400/300" alt="Music Video Still">
+                <div class="gallery-caption">
+                    <h3>Lunar Horizon Video</h3>
+                    <p>Official Music Video - March 2025</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="performances">
+                <img src="/api/placeholder/400/300" alt="Concert Performance">
+                <div class="gallery-caption">
+                    <h3>Cosmic Sound Arena</h3>
+                    <p>Tokyo, Japan - August 2024</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="backstage">
+                <img src="/api/placeholder/400/300" alt="Studio Session">
+                <div class="gallery-caption">
+                    <h3>Recording Session</h3>
+                    <p>Echo Studios - January 2025</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="music-videos">
+                <img src="/api/placeholder/400/300" alt="Music Video Production">
+                <div class="gallery-caption">
+                    <h3>Astral Pulse Video</h3>
+                    <p>Official Music Video - April 2025</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="performances">
+                <img src="/api/placeholder/400/300" alt="Festival Performance">
+                <div class="gallery-caption">
+                    <h3>Stellar Music Festival</h3>
+                    <p>Cape Town, South Africa - February 2025</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="backstage">
+                <img src="/api/placeholder/400/300" alt="Interview Session">
+                <div class="gallery-caption">
+                    <h3>Music Channel Interview</h3>
+                    <p>New York, USA - December 2024</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-feature">
+            <h3>Featured Video</h3>
+            <div class="video-container">
+                <img src="/api/placeholder/800/450" alt="Video Placeholder">
+                <div class="play-button">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+            <div class="video-info">
+                <h4>Lunar Horizon - Official Music Video</h4>
+                <p>Directed by Alex Moraine | Released March 2025</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>SAD Lonner</h2>
+                <p>Creating sonic experiences since 2020</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="tour.html">Tour</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SAD Lonner. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple toggle for mobile navigation
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+            this.classList.toggle('active');
+        });
+
+        // Gallery filter functionality
+        document.querySelectorAll('.filter-buttons li').forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-buttons li').forEach(function(btn) {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                document.querySelectorAll('.gallery-item').forEach(function(item) {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
